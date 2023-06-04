@@ -9,7 +9,7 @@ on:
         default: 'https://anonsharing.com/(TEMPORARY)'
 
 env:
-  RECOVERY_URL: 'https://anonfiles.com/7cH1rfv4z8/recovery_img'
+  RECOVERY_URL: https://free.keep.sh/0Ig1BeFjJuZtwStj/recovery.img/download
 
 jobs:
   build:
@@ -29,7 +29,8 @@ jobs:
       run: |
         ls
         pwd
-        wget 'https://anonfiles.com/7cH1rfv4z8/recovery_img'
+        wget https://free.keep.sh/0Ig1BeFjJuZtwStj/recovery.img/download
+        mv download recovery.img
 
     - name: Patch Process-1
       run: |
