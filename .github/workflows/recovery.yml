@@ -9,7 +9,7 @@ on:
         default: 'https://anonsharing.com/(TEMPORARY)'
 
 env:
-  RECOVERY_URL: 'https://free.keep.sh/yai7flu1kp2HtMQN/recovery.img.lz4'
+  RECOVERY_URL: 'https://anonfiles.com/7cH1rfv4z8/recovery_img'
 
 jobs:
   build:
@@ -22,14 +22,14 @@ jobs:
     - name: Prepare the environment
       run: |
         sudo apt-get install git wget tar openssl python3 -y
-        sudo apt-get update
+        apt-get update
         sudo apt-get -y install lz4
 
     - name: Fetch image from URL
       run: |
         ls
         pwd
-        wget https://free.keep.sh/yai7flu1kp2HtMQN/recovery.img.lz4
+        wget 'https://anonfiles.com/7cH1rfv4z8/recovery_img'
 
     - name: Patch Process-1
       run: |
